@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <title>Friend Finder</title>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <h1>Survey</h1>
+          <hr>
+        </div>
+    </div>  
+    <form>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>About You</h2>
+          <p>Name <i>(Required)</i></p>
+          <input type="text" id="name">
+          <br>
+          <p>URL to your Photo Image <i>(Required)</i></p>
+          <input type="text" id="photo">
+          <br>
+          <hr>
+          <h2>Questions</h2>
+          <p><i>Make a selection from 1 (Strongly Disagree) to 5 (Strongly Agree).</i></p>
+          
+          <h5>1. Batman can beat Superman on his worst night.</h5>
+          <select id = "question1">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          
+          <h5>2. Mighty Mouse can take out Hong Kong Phooey any day.</h5>
+          <select id = "question2">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+
+          <h5>3. Ironman is stronger than Thor. </h5> 
+          <select id = "question3">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+
+          <h5>4. Rogue and Jubilee should be enemies.</h5> 
+          <select id = "question4">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>5. Spiderman and Spiderwoman are the most flexible heroes.</h5> 
+            <select id = "question5">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>6. Captain Marvel should be in charge of Marvel comics.</h5> 
+            <select id = "question6">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>7. Thanos is Apocalypse's worst nightmare.</h5> 
+            <select id = "question7">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>8. Ryu from Street Fighter should be a Marvel superhero.</h5> 
+            <select id = "question8">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>9. Magneto and Professor X are more alike than they think.</h5> 
+             <select id = "question9">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          
+          <h5>10. Wolverine and Cyclops are the key leaders of Marvel and are unmatched.</h5> 
+             <select id = "question10">
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4">5 (Strongly Agree)</option>
+          </select>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-primary btn-lg submit" data-toggle="modal" data-target="#submitModal" id="searchButton"></span> Submit</button>
+        </div>
+      </div>
+    </form> 
+    <hr>
+    <div class="row">
+      <div class="col-lg-12">
+        <a href="/api/friends" class="left">API Hero List</a>
+        <a href="https://github.com/tuayang/FriendFinder" target="_blank">Github Repository</a>
+      </div>
+    </div>
+
+    <!-- SUBMIT MODAL -->
+    <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="submitModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- CODE BEGINS BELOW THIS  -->
+<script type="text/javascript">
+ 
+    $(".submit").on("click", function(event) {
+      var name = $("#name").val().trim();
+      var photo =$("#photo").val().trim();
+      
+      if(photo.length ===0 || name.length ===0){
+        return;
+      }
+     
+      event.preventDefault();
+      var Q1 = $("#question1").val();
+      Q1 = parseInt(Q1);
+      var Q2 = $("#question2").val();
+      Q2 = parseInt(Q2);
+      var Q3 = $("#question3").val();
+      Q3 = parseInt(Q3);
+      var Q4 = $("#question4").val();
+      Q4 = parseInt(Q4);
+      var Q5 = $("#question5").val();
+      Q5 = parseInt(Q5);
+      var Q6 = $("#question6").val();
+      Q6 = parseInt(Q6);
+      var Q7 = $("#question7").val();
+      Q7 = parseInt(Q7);
+      var Q8 = $("#question8").val();
+      Q8 = parseInt(Q8);
+      var Q9 = $("#question9").val();
+      Q9 = parseInt(Q9);
+      var Q10 = $("#question10").val();
+      Q10 = parseInt(Q10);
+      
+      
+      // DATA COLLECTED INTO OBJECT ARRAY
+      var friendStats = {
+        name: name,
+        photo: photo,
+        scores: [Q1,Q2,Q2,Q4,Q5,Q6,Q7,Q8,Q9,Q10]
+      };
+      
+      var currentURL = window.location.origin;
+      $.post(currentURL + "/api/newfriend", friendStats,
+        function() {
+          
+          $("#name").val("");
+          $("#photo").val("");
+        });
+     
+      matcher();
+    });
+
+    // COMPARE INPUT WITH ARRAY INFO
+    function matcher() {
+      var currentURL = window.location.origin;
+      var differenceArray = [];
+      var finalScores = [];
+      var totalDifference = 0;
+      var userScore;
+      
+      $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+      .done(function(data) {
+        
+      
+        var arraylength = data.length -1;
+        userScore = data[arraylength].scores;
+        
+      
+        for(var i = 0; i  < data.length - 1; i++){
+          
+          for(var j = 0 ; j < data[i].scores.length; j++){
+            var input = data[i].scores[j] - userScore[j];
+            if (input< 0){
+            input = input * -1;
+            }
+      
+            differenceArray.push(input);
+            totalDifference += input;
+          }
+      
+          finalScores.push(totalDifference);
+          totalDifference = 0;
+          
+        }
+        var lowestValue =Math.min.apply(null, finalScores);
+        var friendIndex = finalScores.indexOf(lowestValue);       
+
+        var matchedHero = data[friendIndex].name;
+        var matchedHeroPhoto = data[friendIndex].photo;
+        
+        
+        // PRINTS MATCHED HERO
+        $(".modal-title").html("Your Best Match is " + matchedHero);
+        var newImg = $("<img>");
+        newImg.attr("src" , matchedHeroPhoto);
+        $(".modal-body").html(newImg);
+        
+      });
+    }
+</script>
